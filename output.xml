@@ -1,28 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230530 17:41:48.062" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230530 18:01:26.022" rpa="false" schemaversion="3">
 <suite id="s1" name="alenTest" source="C:\Users\diak\IRY\2023-05-30\alenTest.robot">
 <test id="s1-t1" name="Verify Open" line="8">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://alienregistry.azurewebsites.net/</arg>
 <arg>Chrome</arg>
-<arg>option</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230530 17:41:48.321" level="INFO">Opening browser 'Chrome' to base url 'https://alienregistry.azurewebsites.net/'.</msg>
-<msg timestamp="20230530 17:41:48.342" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230530 17:41:48.321" endtime="20230530 17:41:50.813"/>
+<msg timestamp="20230530 18:01:26.279" level="INFO">Opening browser 'Chrome' to base url 'https://alienregistry.azurewebsites.net/'.</msg>
+<msg timestamp="20230530 18:01:26.300" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230530 18:01:26.278" endtime="20230530 18:01:29.286"/>
 </kw>
-<status status="PASS" starttime="20230530 17:41:48.320" endtime="20230530 17:41:50.814"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230530 18:01:29.286" endtime="20230530 18:01:29.433"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Welcome</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230530 18:01:29.505" level="INFO">Current page contains text 'Welcome'.</msg>
+<status status="PASS" starttime="20230530 18:01:29.435" endtime="20230530 18:01:29.506"/>
+</kw>
+<status status="PASS" starttime="20230530 18:01:26.278" endtime="20230530 18:01:29.506"/>
 </test>
-<status status="PASS" starttime="20230530 17:41:48.064" endtime="20230530 17:41:50.816"/>
+<test id="s1-t2" name="Register" line="13">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/nav/div/div/ul[2]/li[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230530 18:01:29.512" level="INFO">Clicking element 'xpath:/html/body/header/nav/div/div/ul[2]/li[1]/a'.</msg>
+<status status="PASS" starttime="20230530 18:01:29.511" endtime="20230530 18:01:29.854"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230530 18:01:30.856" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230530 18:01:29.854" endtime="20230530 18:01:30.856"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Register</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230530 18:01:30.877" level="INFO">Current page contains text 'Register'.</msg>
+<status status="PASS" starttime="20230530 18:01:30.856" endtime="20230530 18:01:30.877"/>
+</kw>
+<status status="PASS" starttime="20230530 18:01:29.510" endtime="20230530 18:01:30.878"/>
+</test>
+<status status="PASS" starttime="20230530 18:01:26.024" endtime="20230530 18:01:30.880"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="alenTest">alenTest</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="alenTest">alenTest</stat>
 </suite>
 </statistics>
 <errors>
