@@ -1,59 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230530 18:01:26.022" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230530 18:19:54.489" rpa="false" schemaversion="3">
 <suite id="s1" name="alenTest" source="C:\Users\diak\IRY\2023-05-30\alenTest.robot">
-<test id="s1-t1" name="Verify Open" line="8">
+<test id="s1-t1" name="Open Home" line="8">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://alienregistry.azurewebsites.net/</arg>
 <arg>Chrome</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230530 18:01:26.279" level="INFO">Opening browser 'Chrome' to base url 'https://alienregistry.azurewebsites.net/'.</msg>
-<msg timestamp="20230530 18:01:26.300" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230530 18:01:26.278" endtime="20230530 18:01:29.286"/>
+<msg timestamp="20230530 18:19:54.750" level="INFO">Opening browser 'Chrome' to base url 'https://alienregistry.azurewebsites.net/'.</msg>
+<msg timestamp="20230530 18:19:54.772" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230530 18:19:54.749" endtime="20230530 18:19:57.660"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230530 18:01:29.286" endtime="20230530 18:01:29.433"/>
+<status status="PASS" starttime="20230530 18:19:57.660" endtime="20230530 18:19:57.845"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Welcome</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230530 18:01:29.505" level="INFO">Current page contains text 'Welcome'.</msg>
-<status status="PASS" starttime="20230530 18:01:29.435" endtime="20230530 18:01:29.506"/>
+<msg timestamp="20230530 18:19:57.880" level="INFO">Current page contains text 'Welcome'.</msg>
+<status status="PASS" starttime="20230530 18:19:57.845" endtime="20230530 18:19:57.880"/>
 </kw>
-<status status="PASS" starttime="20230530 18:01:26.278" endtime="20230530 18:01:29.506"/>
+<status status="PASS" starttime="20230530 18:19:54.748" endtime="20230530 18:19:57.883"/>
 </test>
-<test id="s1-t2" name="Register" line="13">
+<test id="s1-t2" name="Open Register Page" line="13">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath:/html/body/header/nav/div/div/ul[2]/li[1]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230530 18:01:29.512" level="INFO">Clicking element 'xpath:/html/body/header/nav/div/div/ul[2]/li[1]/a'.</msg>
-<status status="PASS" starttime="20230530 18:01:29.511" endtime="20230530 18:01:29.854"/>
+<msg timestamp="20230530 18:19:57.891" level="INFO">Clicking element 'xpath:/html/body/header/nav/div/div/ul[2]/li[1]/a'.</msg>
+<status status="PASS" starttime="20230530 18:19:57.890" endtime="20230530 18:19:58.215"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230530 18:01:30.856" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230530 18:01:29.854" endtime="20230530 18:01:30.856"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/main/h1</arg>
+<arg>2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230530 18:19:58.216" endtime="20230530 18:19:58.252"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Register</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230530 18:01:30.877" level="INFO">Current page contains text 'Register'.</msg>
-<status status="PASS" starttime="20230530 18:01:30.856" endtime="20230530 18:01:30.877"/>
+<msg timestamp="20230530 18:19:58.280" level="INFO">Current page contains text 'Register'.</msg>
+<status status="PASS" starttime="20230530 18:19:58.254" endtime="20230530 18:19:58.280"/>
 </kw>
-<status status="PASS" starttime="20230530 18:01:29.510" endtime="20230530 18:01:30.878"/>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>Register.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230530 18:19:58.445" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Register.png"&gt;&lt;img src="Register.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230530 18:19:58.281" endtime="20230530 18:19:58.445"/>
+</kw>
+<status status="PASS" starttime="20230530 18:19:57.887" endtime="20230530 18:19:58.446"/>
 </test>
-<status status="PASS" starttime="20230530 18:01:26.024" endtime="20230530 18:01:30.880"/>
+<test id="s1-t3" name="Verify Registration" line="21">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="Input_Email"]</arg>
+<arg>szoftteszt2025@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230530 18:19:58.449" level="INFO">Typing text 'szoftteszt2025@gmail.com' into text field 'xpath://*[@id="Input_Email"]'.</msg>
+<status status="PASS" starttime="20230530 18:19:58.448" endtime="20230530 18:19:58.632"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="Input_Password"]</arg>
+<arg>Password-11</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230530 18:19:58.634" level="INFO">Typing text 'Password-11' into text field 'xpath://*[@id="Input_Password"]'.</msg>
+<status status="PASS" starttime="20230530 18:19:58.633" endtime="20230530 18:19:58.753"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="Input_ConfirmPassword"]</arg>
+<arg>Password-11</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230530 18:19:58.755" level="INFO">Typing text 'Password-11' into text field 'xpath://*[@id="Input_ConfirmPassword"]'.</msg>
+<status status="PASS" starttime="20230530 18:19:58.754" endtime="20230530 18:19:58.862"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="registerSubmit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230530 18:19:58.863" level="INFO">Clicking button 'xpath://*[@id="registerSubmit"]'.</msg>
+<status status="PASS" starttime="20230530 18:19:58.863" endtime="20230530 18:19:59.308"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="confirm-link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230530 18:19:59.309" level="INFO">Clicking element 'xpath://*[@id="confirm-link"]'.</msg>
+<status status="PASS" starttime="20230530 18:19:59.309" endtime="20230530 18:19:59.605"/>
+</kw>
+<status status="PASS" starttime="20230530 18:19:58.448" endtime="20230530 18:19:59.608"/>
+</test>
+<status status="PASS" starttime="20230530 18:19:54.491" endtime="20230530 18:19:59.617"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="alenTest">alenTest</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="alenTest">alenTest</stat>
 </suite>
 </statistics>
 <errors>
