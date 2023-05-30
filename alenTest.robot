@@ -45,9 +45,13 @@ Verify Input
     Click Element    xpath:/html/body/div/main/p/a
     # Az alábbi kell a fentihez...
     Sleep    1s
-    Input Text    xpath://*[@id="Name"]    Sectoid
+    Input Text    xpath://*[@id="Name"]    Ethereal
     Input Text    xpath://*[@id="Planet"]    Mars
     Input Text    xpath://*[@id="Population"]    25000    
     Input Text    xpath://*[@id="Attitude"]    Hostile
 
     Click Button    xpath:/html/body/div/main/div[1]/div/form/div[5]/input
+    Sleep    1s
+    Page Should Contain    Ethereal
+
+    Click Button   xpath:/html/body/header/nav/div/div/ul[2]/li[2]/form/button
