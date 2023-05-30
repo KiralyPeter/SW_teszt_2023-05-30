@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230530 17:41:48.062" rpa="false" schemaversion="3">
+<suite id="s1" name="alenTest" source="C:\Users\diak\IRY\2023-05-30\alenTest.robot">
+<test id="s1-t1" name="Verify Open" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://alienregistry.azurewebsites.net/</arg>
+<arg>Chrome</arg>
+<arg>option</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230530 17:41:48.321" level="INFO">Opening browser 'Chrome' to base url 'https://alienregistry.azurewebsites.net/'.</msg>
+<msg timestamp="20230530 17:41:48.342" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230530 17:41:48.321" endtime="20230530 17:41:50.813"/>
+</kw>
+<status status="PASS" starttime="20230530 17:41:48.320" endtime="20230530 17:41:50.814"/>
+</test>
+<status status="PASS" starttime="20230530 17:41:48.064" endtime="20230530 17:41:50.816"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="alenTest">alenTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
