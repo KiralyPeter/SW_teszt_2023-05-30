@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230530 18:34:06.096" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230530 19:11:13.845" rpa="false" schemaversion="3">
 <suite id="s1" name="alenTest" source="C:\Users\diak\IRY\2023-05-30\alenTest.robot">
 <test id="s1-t1" name="Open Home" line="12">
 <kw name="Open Browser" library="SeleniumLibrary">
@@ -7,72 +7,94 @@
 <arg>Chrome</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230530 18:34:06.367" level="INFO">Opening browser 'Chrome' to base url 'https://alienregistry.azurewebsites.net/'.</msg>
-<msg timestamp="20230530 18:34:06.391" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230530 18:34:06.367" endtime="20230530 18:34:09.096"/>
+<msg timestamp="20230530 19:11:14.105" level="INFO">Opening browser 'Chrome' to base url 'https://alienregistry.azurewebsites.net/'.</msg>
+<msg timestamp="20230530 19:11:14.124" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230530 19:11:14.105" endtime="20230530 19:11:16.616"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230530 18:34:09.097" endtime="20230530 18:34:09.230"/>
+<status status="PASS" starttime="20230530 19:11:16.617" endtime="20230530 19:11:16.745"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Welcome</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230530 18:34:09.308" level="INFO">Current page contains text 'Welcome'.</msg>
-<status status="PASS" starttime="20230530 18:34:09.231" endtime="20230530 18:34:09.308"/>
+<msg timestamp="20230530 19:11:16.800" level="INFO">Current page contains text 'Welcome'.</msg>
+<status status="PASS" starttime="20230530 19:11:16.746" endtime="20230530 19:11:16.800"/>
 </kw>
-<status status="PASS" starttime="20230530 18:34:06.366" endtime="20230530 18:34:09.309"/>
+<status status="PASS" starttime="20230530 19:11:14.104" endtime="20230530 19:11:16.802"/>
 </test>
-<test id="s1-t2" name="Verify Logn" line="32">
+<test id="s1-t2" name="Verify Login" line="32">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath:/html/body/header/nav/div/div/ul[2]/li[2]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230530 18:34:09.312" level="INFO">Clicking element 'xpath:/html/body/header/nav/div/div/ul[2]/li[2]/a'.</msg>
-<status status="PASS" starttime="20230530 18:34:09.311" endtime="20230530 18:34:09.665"/>
+<msg timestamp="20230530 19:11:16.808" level="INFO">Clicking element 'xpath:/html/body/header/nav/div/div/ul[2]/li[2]/a'.</msg>
+<status status="PASS" starttime="20230530 19:11:16.807" endtime="20230530 19:11:17.189"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230530 18:34:10.666" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230530 18:34:09.665" endtime="20230530 18:34:10.666"/>
+<msg timestamp="20230530 19:11:18.190" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230530 19:11:17.190" endtime="20230530 19:11:18.190"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath://*[@id="Input_Email"]</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230530 18:34:10.669" level="INFO">Typing text 'szoftteszt2025@gmail.com' into text field 'xpath://*[@id="Input_Email"]'.</msg>
-<status status="PASS" starttime="20230530 18:34:10.668" endtime="20230530 18:34:10.833"/>
+<msg timestamp="20230530 19:11:18.193" level="INFO">Typing text 'szoftteszt2025@gmail.com' into text field 'xpath://*[@id="Input_Email"]'.</msg>
+<status status="PASS" starttime="20230530 19:11:18.192" endtime="20230530 19:11:18.371"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath://*[@id="Input_Password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230530 18:34:10.835" level="INFO">Typing text 'Password-11' into text field 'xpath://*[@id="Input_Password"]'.</msg>
-<status status="PASS" starttime="20230530 18:34:10.835" endtime="20230530 18:34:10.968"/>
+<msg timestamp="20230530 19:11:18.372" level="INFO">Typing text 'Password-11' into text field 'xpath://*[@id="Input_Password"]'.</msg>
+<status status="PASS" starttime="20230530 19:11:18.372" endtime="20230530 19:11:18.494"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://*[@id="login-submit"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230530 18:34:10.969" level="INFO">Clicking button 'xpath://*[@id="login-submit"]'.</msg>
-<status status="PASS" starttime="20230530 18:34:10.968" endtime="20230530 18:34:11.445"/>
+<msg timestamp="20230530 19:11:18.496" level="INFO">Clicking button 'xpath://*[@id="login-submit"]'.</msg>
+<status status="PASS" starttime="20230530 19:11:18.495" endtime="20230530 19:11:18.866"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath:/html/body/header/nav/div/div/ul[2]/li[1]/a</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230530 18:34:11.446" endtime="20230530 18:34:11.493"/>
+<status status="PASS" starttime="20230530 19:11:18.868" endtime="20230530 19:11:18.992"/>
 </kw>
-<status status="PASS" starttime="20230530 18:34:09.310" endtime="20230530 18:34:11.493"/>
+<status status="PASS" starttime="20230530 19:11:16.807" endtime="20230530 19:11:18.992"/>
 </test>
-<status status="PASS" starttime="20230530 18:34:06.098" endtime="20230530 18:34:11.495"/>
+<test id="s1-t3" name="Verify Input" line="40">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="Aliens"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230530 19:11:18.994" level="INFO">Clicking element 'xpath://*[@id="Aliens"]'.</msg>
+<status status="PASS" starttime="20230530 19:11:18.993" endtime="20230530 19:11:19.285"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230530 19:11:20.288" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230530 19:11:19.287" endtime="20230530 19:11:20.288"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpah://html/body/div/main/p/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230530 19:11:25.548" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230530 19:11:25.548" level="FAIL">Element 'xpah://html/body/div/main/p/a' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230530 19:11:20.289" endtime="20230530 19:11:25.550"/>
+</kw>
+<status status="FAIL" starttime="20230530 19:11:18.993" endtime="20230530 19:11:25.550">Element 'xpah://html/body/div/main/p/a' not visible after 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20230530 19:11:13.847" endtime="20230530 19:11:25.552"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="alenTest">alenTest</stat>
+<stat pass="2" fail="1" skip="0" id="s1" name="alenTest">alenTest</stat>
 </suite>
 </statistics>
 <errors>

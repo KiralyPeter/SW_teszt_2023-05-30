@@ -29,7 +29,7 @@ Open Home
 #     Click Button    xpath://*[@id="registerSubmit"]
 #     Click Element    xpath://*[@id="confirm-link"]
 
-Verify Logn
+Verify Login
     Click Element    xpath:/html/body/header/nav/div/div/ul[2]/li[2]/a
     sleep    1s
     Input Text    xpath://*[@id="Input_Email"]    ${email}
@@ -37,4 +37,10 @@ Verify Logn
     Click Button    xpath://*[@id="login-submit"]
     Wait Until Element Is Visible    xpath:/html/body/header/nav/div/div/ul[2]/li[1]/a
 
+Verify Input
+    Click Element    xpath://*[@id="Aliens"]
+    Sleep    1s
+    Wait Until Element Is Visible    xpah://html/body/div/main/p/a
+    # Click Element    xpah:/html/body/div/main/p/a
+    
     
