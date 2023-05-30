@@ -40,7 +40,14 @@ Verify Login
 Verify Input
     Click Element    xpath://*[@id="Aliens"]
     Sleep    1s
-    Wait Until Element Is Visible    xpah://html/body/div/main/p/a
+    # Wait Until Element Is Visible    xpath:/html/body/div/main/h1
     # Click Element    xpah:/html/body/div/main/p/a
-    
-    
+    Click Element    xpath:/html/body/div/main/p/a
+    # Az alábbi kell a fentihez...
+    Sleep    1s
+    Input Text    xpath://*[@id="Name"]    Sectoid
+    Input Text    xpath://*[@id="Planet"]    Mars
+    Input Text    xpath://*[@id="Population"]    25000    
+    Input Text    xpath://*[@id="Attitude"]    Hostile
+
+    Click Button    xpath:/html/body/div/main/div[1]/div/form/div[5]/input
