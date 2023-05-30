@@ -54,4 +54,5 @@ Verify Input
     Sleep    1s
     Page Should Contain    Ethereal
 
+Logout
     Click Button   xpath:/html/body/header/nav/div/div/ul[2]/li[2]/form/button
